@@ -1,17 +1,22 @@
 package com.ICCU.Pages;
 
-import com.ICCU.Browser;
+import org.openqa.selenium.WebDriver;
 
 public class EspanolPage {
-
     static String url = "https://www.iccu.com/espanol/";
     static String title = "Home - ICCU - Idaho Central Credit Union";
 
+    WebDriver driver;
+
+    public EspanolPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void GoTo() {
-        Browser.GoTo(url);
+        driver.get(url);
     }
 
     public boolean IsAt() {
-        return Browser.Title().equals(title);
+        return driver.getTitle().equals(title);
     }
 }

@@ -1,17 +1,26 @@
 package com.ICCU.Pages;
 
-import com.ICCU.Browser;
+import org.openqa.selenium.WebDriver;
 
 public class EducationPage {
-
     static String url = "https://iccu.everfi-next.net/";
-    static String title = "Idaho Central Credit Union | Idaho Central Credit Union";
+    static String expectedTitle = "Idaho Central Credit Union | Idaho Central Credit Union";
+
+    WebDriver driver;
+
+    public EducationPage(WebDriver driver) {
+        this.driver = driver;
+    }
 
     public void GoTo() {
-        Browser.GoTo(url);
+        driver.get(url);
     }
 
     public boolean IsAt() {
-        return Browser.Title().equals(title);
+        return driver.getTitle().equals(expectedTitle);
+    }
+
+    public String getExpectedTitle() {
+        return expectedTitle;
     }
 }

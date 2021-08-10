@@ -1,17 +1,22 @@
 package com.ICCU.Pages;
 
-import com.ICCU.Browser;
+import org.openqa.selenium.WebDriver;
 
 public class JoinPage {
-
     static String url = "https://www.iccu.com/become-a-member";
     static String title = "Become a Member - ICCU - Idaho Central Credit Union";
 
+    WebDriver driver;
+
+    public JoinPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void GoTo() {
-        Browser.GoTo(url);
+        driver.get(url);
     }
 
     public boolean IsAt() {
-        return Browser.Title().equals(title);
+        return driver.getTitle().equals(title);
     }
 }

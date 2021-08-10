@@ -1,17 +1,22 @@
 package com.ICCU.Pages;
 
-import com.ICCU.Browser;
+import org.openqa.selenium.WebDriver;
 
 public class LocationsPage {
-
     static String url = "https://www.iccu.com/branches-atms";
     static String title = "Branch & ATM Locator | Idaho Central Credit Union | ICCU";
 
+    WebDriver driver;
+
+    public LocationsPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public void GoTo() {
-        Browser.GoTo(url);
+        driver.get(url);
     }
 
     public boolean IsAt() {
-        return Browser.Title().equals(title);
+        return driver.getTitle().equals(title);
     }
 }
