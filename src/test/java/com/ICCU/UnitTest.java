@@ -14,63 +14,63 @@ public class UnitTest {
 
     @Test
     public void canGoToHomePage() {
-        Pages.homePage().GoTo();
-        Assertions.assertTrue(Pages.homePage().IsAt());
+        PageHolder.homePage().GoTo();
+        Assertions.assertTrue(PageHolder.homePage().IsAt());
     }
 
     @Test
     public void canGoToAboutPage() {
-        Pages.aboutPage().GoTo();
-        Assertions.assertTrue(Pages.aboutPage().IsAt());
+        PageHolder.aboutPage().GoTo();
+        Assertions.assertTrue(PageHolder.aboutPage().IsAt());
     }
 
     @Test
     public void canNavigateToCareersPageFromNavBar() {
-        Pages.homePage().GoTo();
-        Components.navBar().clickCareers();
-        Assertions.assertTrue(Pages.careersPage().IsAt());
+        PageHolder.homePage().GoTo();
+        ComponentHolder.navBar().clickCareers();
+        Assertions.assertTrue(PageHolder.careersPage().IsAt());
     }
 
     @Test
     public void canNavigateToContactPageFromNavBar() {
-        Pages.homePage().GoTo();
-        Components.navBar().clickContact();
-        Assertions.assertTrue(Pages.contactPage().IsAt());
+        PageHolder.homePage().GoTo();
+        ComponentHolder.navBar().clickContact();
+        Assertions.assertTrue(PageHolder.contactPage().IsAt());
     }
 
     @Test
     public void canNavigateToEducationPageFromNavBar() {
-        Pages.homePage().GoTo();
-        Components.navBar().clickEducation();
-        Assertions.assertTrue(Pages.educationPage().IsAt());
+        PageHolder.homePage().GoTo();
+        ComponentHolder.navBar().clickEducation();
+        Assertions.assertTrue(PageHolder.educationPage().IsAt());
     }
 
     @Test
     public void canNavigateToEspanolPageFromNavBar() {
-        Pages.homePage().GoTo();
-        Components.navBar().clickEspanol();
-        Assertions.assertTrue(Pages.espanolPage().IsAt());
+        PageHolder.homePage().GoTo();
+        ComponentHolder.navBar().clickEspanol();
+        Assertions.assertTrue(PageHolder.espanolPage().IsAt());
     }
 
     @Test
     public void canNavigateToJoinPageFromNavBar() {
-        Pages.homePage().GoTo();
-        Components.navBar().clickJoin();
-        Assertions.assertTrue(Pages.joinPage().IsAt());
+        PageHolder.homePage().GoTo();
+        ComponentHolder.navBar().clickJoin();
+        Assertions.assertTrue(PageHolder.joinPage().IsAt());
     }
 
     @Test
     public void canNavigateToLocationPageFromNavBar() {
-        Pages.homePage().GoTo();
-        Components.navBar().clickLocation();
-        Assertions.assertTrue(Pages.locationsPage().IsAt());
+        PageHolder.homePage().GoTo();
+        ComponentHolder.navBar().clickLocation();
+        Assertions.assertTrue(PageHolder.locationsPage().IsAt());
     }
 
     @Test
     public void canNavigateToRatesPageFromNavBar() {
-        Pages.homePage().GoTo();
-        Components.navBar().clickRates();
-        Assertions.assertTrue(Pages.ratesPage().IsAt());
+        PageHolder.homePage().GoTo();
+        ComponentHolder.navBar().clickRates();
+        Assertions.assertTrue(PageHolder.ratesPage().IsAt());
     }
 
     @AfterAll

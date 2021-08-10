@@ -1,6 +1,8 @@
 package com.ICCU;
 
-public class Components {
+import com.ICCU.Components.NavBar;
+
+public class ComponentHolder {
 
     public static NavBar navBar() {
         NavBar navBar = new NavBar();

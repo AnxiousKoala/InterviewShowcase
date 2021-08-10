@@ -1,4 +1,6 @@
-package com.ICCU;
+package com.ICCU.Pages;
+
+import com.ICCU.Browser;
 
 public class HomePage {
 

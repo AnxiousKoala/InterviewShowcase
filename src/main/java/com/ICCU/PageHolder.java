@@ -1,6 +1,8 @@
 package com.ICCU;
 
-public class Pages {
+import com.ICCU.Pages.*;
+
+public class PageHolder {
 
     public static AboutPage aboutPage() {
         AboutPage aboutPage = new AboutPage();
