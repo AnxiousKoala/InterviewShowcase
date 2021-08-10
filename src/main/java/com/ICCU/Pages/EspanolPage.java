@@ -3,8 +3,8 @@ package com.ICCU.Pages;
 import org.openqa.selenium.WebDriver;
 
 public class EspanolPage {
-    static String url = "https://www.iccu.com/espanol/";
-    static String title = "Home - ICCU - Idaho Central Credit Union";
+    static String expectedUrl = "https://www.iccu.com/espanol/";
+    static String expectedTitle = "Home - ICCU - Idaho Central Credit Union";
 
     WebDriver driver;
 
@@ -13,10 +13,10 @@ public class EspanolPage {
     }
 
     public void GoTo() {
-        driver.get(url);
+        driver.get(expectedUrl);
     }
 
     public boolean IsAt() {
-        return driver.getTitle().equals(title);
+        return driver.getTitle().equals(expectedTitle);
     }
 }

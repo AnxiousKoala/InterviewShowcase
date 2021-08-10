@@ -3,8 +3,8 @@ package com.ICCU.Pages;
 import org.openqa.selenium.WebDriver;
 
 public class JoinPage {
-    static String url = "https://www.iccu.com/become-a-member";
-    static String title = "Become a Member - ICCU - Idaho Central Credit Union";
+    static String expectedUrl = "https://www.iccu.com/become-a-member";
+    static String expectedTitle = "Become a Member - ICCU - Idaho Central Credit Union";
 
     WebDriver driver;
 
@@ -13,10 +13,10 @@ public class JoinPage {
     }
 
     public void GoTo() {
-        driver.get(url);
+        driver.get(expectedUrl);
     }
 
     public boolean IsAt() {
-        return driver.getTitle().equals(title);
+        return driver.getTitle().equals(expectedTitle);
     }
 }

@@ -3,7 +3,7 @@ package com.ICCU.Pages;
 import org.openqa.selenium.WebDriver;
 
 public class EducationPage {
-    static String url = "https://iccu.everfi-next.net/";
+    static String expectedUrl = "https://iccu.everfi-next.net/";
     static String expectedTitle = "Idaho Central Credit Union | Idaho Central Credit Union";
 
     WebDriver driver;
@@ -13,7 +13,7 @@ public class EducationPage {
     }
 
     public void GoTo() {
-        driver.get(url);
+        driver.get(expectedUrl);
     }
 
     public boolean IsAt() {

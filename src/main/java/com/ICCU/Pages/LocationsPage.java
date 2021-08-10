@@ -3,8 +3,8 @@ package com.ICCU.Pages;
 import org.openqa.selenium.WebDriver;
 
 public class LocationsPage {
-    static String url = "https://www.iccu.com/branches-atms";
-    static String title = "Branch & ATM Locator | Idaho Central Credit Union | ICCU";
+    static String expectedUrl = "https://www.iccu.com/branches-atms";
+    static String expectedTitle = "Branch & ATM Locator | Idaho Central Credit Union | ICCU";
 
     WebDriver driver;
 
@@ -13,10 +13,10 @@ public class LocationsPage {
     }
 
     public void GoTo() {
-        driver.get(url);
+        driver.get(expectedUrl);
     }
 
     public boolean IsAt() {
-        return driver.getTitle().equals(title);
+        return driver.getTitle().equals(expectedTitle);
     }
 }
