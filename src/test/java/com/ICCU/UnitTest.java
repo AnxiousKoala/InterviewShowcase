@@ -24,6 +24,55 @@ public class UnitTest {
         Assertions.assertTrue(Pages.aboutPage().IsAt());
     }
 
+    @Test
+    public void canNavigateToCareersPageFromNavBar() {
+        Pages.homePage().GoTo();
+        Components.navBar().clickCareers();
+        Assertions.assertTrue(Pages.careersPage().IsAt());
+    }
+
+    @Test
+    public void canNavigateToContactPageFromNavBar() {
+        Pages.homePage().GoTo();
+        Components.navBar().clickContact();
+        Assertions.assertTrue(Pages.contactPage().IsAt());
+    }
+
+    @Test
+    public void canNavigateToEducationPageFromNavBar() {
+        Pages.homePage().GoTo();
+        Components.navBar().clickEducation();
+        Assertions.assertTrue(Pages.educationPage().IsAt());
+    }
+
+    @Test
+    public void canNavigateToEspanolPageFromNavBar() {
+        Pages.homePage().GoTo();
+        Components.navBar().clickEspanol();
+        Assertions.assertTrue(Pages.espanolPage().IsAt());
+    }
+
+    @Test
+    public void canNavigateToJoinPageFromNavBar() {
+        Pages.homePage().GoTo();
+        Components.navBar().clickJoin();
+        Assertions.assertTrue(Pages.joinPage().IsAt());
+    }
+
+    @Test
+    public void canNavigateToLocationPageFromNavBar() {
+        Pages.homePage().GoTo();
+        Components.navBar().clickLocation();
+        Assertions.assertTrue(Pages.locationsPage().IsAt());
+    }
+
+    @Test
+    public void canNavigateToRatesPageFromNavBar() {
+        Pages.homePage().GoTo();
+        Components.navBar().clickRates();
+        Assertions.assertTrue(Pages.ratesPage().IsAt());
+    }
+
     @AfterAll
     public static void cleanUp() {
         Browser.Close();

@@ -1,6 +1,8 @@
 package com.ICCU;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Browser {
@@ -13,6 +15,10 @@ public class Browser {
 
     public static String Title() {
         return driver.getTitle();
+    }
+
+    public static void ClickID(String ID) {
+        driver.findElement(By.id(ID)).click();
     }
 
     public static void Close() {
