@@ -28,6 +28,8 @@ public class TestNavigationBar {
     public LocationsPage locationsPage;
     public RatesPage ratesPage;
     public NavBar navBar;
+    public LandingPage landingPage;
+    public AuthenticationPage authenticationPage;
     public BrowserHelper browserHelper;
 
     @Test
@@ -117,6 +119,33 @@ public class TestNavigationBar {
         Assertions.assertTrue(ratesPage.IsAt());
     }
 
+    @Test
+    public void canLoginAsValidUserFromNavBar() {
+        // THIS TEST IS JUST PROOF OF CONCEPT AND WILL ALWAYS FAIL.
+        // Obviously...These are not valid credentials
+
+        // Given I am at the home page
+        homePage.GoTo();
+
+        // I can input a username, password, and click the login button on the Navigation Bar
+        navBar.loginValidUser("admin", "123456789");
+
+        // Then I will be at the logged in landing page
+        Assertions.assertTrue(landingPage.IsAt());
+    }
+
+    @Test
+    public void shouldRedirectToAuthenticationPageAfterInvalidLoginFromNavBar() {
+        // Given I am at the home page
+        homePage.GoTo();
+
+        // I can input a username, password, and click the login button on the Navigation Bar
+        navBar.loginInvalidUser("WrongUsername", "WrongPassword");
+
+        // Then I will be at the logged in landing page
+        Assertions.assertTrue(authenticationPage.IsAt());
+    }
+
     @BeforeEach
     public void beforeEach() {
         // Reset to the homepage for each test
@@ -131,6 +160,8 @@ public class TestNavigationBar {
         joinPage = new JoinPage(driver);
         locationsPage = new LocationsPage(driver);
         ratesPage = new RatesPage(driver);
+        landingPage = new LandingPage(driver);
+        authenticationPage = new AuthenticationPage(driver);
 
         // Initialize Required Components
         navBar = new NavBar(driver);
