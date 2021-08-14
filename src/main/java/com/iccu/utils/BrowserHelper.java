@@ -1,4 +1,4 @@
-package com.ICCU.utils;
+package com.iccu.utils;
 
 import org.openqa.selenium.WebDriver;
 

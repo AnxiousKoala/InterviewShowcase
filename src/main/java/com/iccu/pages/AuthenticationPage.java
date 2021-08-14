@@ -1,4 +1,4 @@
-package com.ICCU.Pages;
+package com.iccu.pages;
 
 public class AuthenticationPage extends BasePage {
     static String expectedUrl = "https://myebranch.iccu.com/Authentication";

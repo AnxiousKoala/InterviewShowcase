@@ -1,14 +1,14 @@
-package com.ICCU.Components;
+package com.iccu.components;
 
-import com.ICCU.Pages.AuthenticationPage;
-import com.ICCU.Pages.LandingPage;
+import com.iccu.pages.AuthenticationPage;
+import com.iccu.pages.LandingPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import com.ICCU.utils.BrowserHelper;
+import com.iccu.utils.BrowserHelper;
 
 public class NavBar {
 

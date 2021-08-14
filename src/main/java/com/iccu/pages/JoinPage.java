@@ -1,4 +1,4 @@
-package com.ICCU.Pages;
+package com.iccu.pages;
 
 public class JoinPage extends BasePage {
     static String expectedUrl = "https://www.iccu.com/become-a-member";

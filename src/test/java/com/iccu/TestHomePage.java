@@ -1,7 +1,7 @@
-package com.ICCU;
+package com.iccu;
 
-import com.ICCU.Pages.BasePage;
-import com.ICCU.Pages.HomePage;
+import com.iccu.pages.BasePage;
+import com.iccu.pages.HomePage;
 import org.junit.jupiter.api.*;
 
 

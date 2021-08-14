@@ -1,7 +1,7 @@
-package com.ICCU.Pages;
+package com.iccu.pages;
 
-import com.ICCU.Components.NavBar;
-import com.ICCU.utils.BrowserHelper;
+import com.iccu.components.NavBar;
+import com.iccu.utils.BrowserHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

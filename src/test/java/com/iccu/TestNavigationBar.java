@@ -1,6 +1,6 @@
-package com.ICCU;
+package com.iccu;
 
-import com.ICCU.Pages.*;
+import com.iccu.pages.*;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;

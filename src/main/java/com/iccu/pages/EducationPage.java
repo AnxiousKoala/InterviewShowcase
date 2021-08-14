@@ -1,4 +1,4 @@
-package com.ICCU.Pages;
+package com.iccu.pages;
 
 public class EducationPage extends BasePage {
     static String expectedUrl = "https://iccu.everfi-next.net/";
