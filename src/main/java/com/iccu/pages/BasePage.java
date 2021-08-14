@@ -89,6 +89,8 @@ public class BasePage {
             driver.findElement(By.name(selectors.getProperty(element))).click();
         } else if (element.contains("_CLASS")) {
             driver.findElement(By.className(selectors.getProperty(element))).click();
+        } else if (element.contains("_CSS")) {
+            driver.findElement(By.cssSelector(selectors.getProperty(element))).click();
         }
     }
 
@@ -101,7 +103,24 @@ public class BasePage {
             driver.findElement(By.name(selectors.getProperty(element))).sendKeys(value);
         } else if (element.contains("_CLASS")) {
             driver.findElement(By.className(selectors.getProperty(element))).sendKeys(value);
+        } else if (element.contains("_CSS")) {
+            driver.findElement(By.cssSelector(selectors.getProperty(element))).sendKeys(value);
         }
+    }
+
+    public WebElement findElement(String element) {
+        if (element.contains("_XP")) {
+            return driver.findElement(By.xpath(selectors.getProperty(element)));
+        } else if (element.contains("_ID")) {
+            return driver.findElement(By.id(selectors.getProperty(element)));
+        } else if (element.contains("_NAME")) {
+            return driver.findElement(By.name(selectors.getProperty(element)));
+        } else if (element.contains("_CLASS")) {
+            return driver.findElement(By.className(selectors.getProperty(element)));
+        } else if (element.contains("_CSS")) {
+            return driver.findElement(By.cssSelector(selectors.getProperty(element)));
+        }
+        return null;
     }
 
     public List<WebElement> findElements(String element) {
@@ -113,12 +132,27 @@ public class BasePage {
             return driver.findElements(By.name(selectors.getProperty(element)));
         } else if (element.contains("_CLASS")) {
             return driver.findElements(By.className(selectors.getProperty(element)));
+        } else if (element.contains("_CSS")) {
+            return driver.findElements(By.cssSelector(selectors.getProperty(element)));
         }
         return new ArrayList<>();
     }
 
     public void GoTo(String url) {
         driver.get(config.getProperty(url));
+    public boolean isDisplayed(String element) {
+        if (element.contains("_XP")) {
+            return driver.findElement(By.xpath(selectors.getProperty(element))).isDisplayed();
+        } else if (element.contains("_ID")) {
+            return driver.findElement(By.id(selectors.getProperty(element))).isDisplayed();
+        } else if (element.contains("_NAME")) {
+            return driver.findElement(By.name(selectors.getProperty(element))).isDisplayed();
+        } else if (element.contains("_CLASS")) {
+            return driver.findElement(By.className(selectors.getProperty(element))).isDisplayed();
+        } else if (element.contains("_CSS")) {
+            return driver.findElement(By.cssSelector(selectors.getProperty(element))).isDisplayed();
+        }
+        return false;
     }
 
     public boolean IsAt(String title) {
