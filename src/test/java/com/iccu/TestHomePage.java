@@ -13,10 +13,10 @@ public class TestHomePage {
         // Given the browser is already open
 
         // I can navigate to ICCU's home page url
-        homePage.GoTo();
+        homePage.GoTo("HomePage_URL");
 
         // Then the home page will load
-        Assertions.assertTrue(homePage.IsAt());
+        Assertions.assertTrue(homePage.IsAt("HomePage_Title"));
     }
 
     @BeforeEach

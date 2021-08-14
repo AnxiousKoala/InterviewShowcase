@@ -1,28 +1,40 @@
 package com.iccu.utils;
 
-import org.openqa.selenium.WebDriver;
+import com.iccu.pages.BasePage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BrowserHelper {
-    WebDriver driver;
 
-    public BrowserHelper(WebDriver driver) {
-        this.driver = driver;
+    public BrowserHelper() {
+
     }
 
     public boolean hasMultipleTabs() {
-        return driver.getWindowHandles().size() > 1;
+        return BasePage.driver.getWindowHandles().size() > 1;
     }
 
     public void switchTab() {
         //Store the ID of the original window
-        String originalWindow = driver.getWindowHandle();
+        String originalWindow = BasePage.driver.getWindowHandle();
 
         //Loop through until we find a new window handle
-        for (String windowHandle : driver.getWindowHandles()) {
+        for (String windowHandle : BasePage.driver.getWindowHandles()) {
             if(!originalWindow.contentEquals(windowHandle)) {
-                driver.switchTo().window(windowHandle);
+                BasePage.driver.switchTo().window(windowHandle);
                 break;
             }
         }
+    }
+
+    public void waitUntilElementIsVisible(String element, int duration) {
+        new WebDriverWait(BasePage.driver, Duration.ofSeconds(duration)).until(ExpectedConditions.visibilityOfElementLocated(By.id(BasePage.selectors.getProperty(element))));
+    }
+
+    public void waitUntilPageTitleIs(String pageTitle, int duration) {
+        new WebDriverWait(BasePage.driver, Duration.ofSeconds(duration)).until(ExpectedConditions.titleIs(pageTitle));
     }
 }
