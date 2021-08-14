@@ -85,8 +85,10 @@ public class BasePage {
             driver.findElement(By.xpath(selectors.getProperty(element))).click();
         } else if (element.contains("_ID")) {
             driver.findElement(By.id(selectors.getProperty(element))).click();
-        } else if(element.contains("_NAME")) {
+        } else if (element.contains("_NAME")) {
             driver.findElement(By.name(selectors.getProperty(element))).click();
+        } else if (element.contains("_CLASS")) {
+            driver.findElement(By.className(selectors.getProperty(element))).click();
         }
     }
 
@@ -97,6 +99,8 @@ public class BasePage {
             driver.findElement(By.id(selectors.getProperty(element))).sendKeys(value);
         } else if (element.contains("_NAME")) {
             driver.findElement(By.name(selectors.getProperty(element))).sendKeys(value);
+        } else if (element.contains("_CLASS")) {
+            driver.findElement(By.className(selectors.getProperty(element))).sendKeys(value);
         }
     }
 
@@ -105,8 +109,10 @@ public class BasePage {
             return driver.findElements(By.xpath(selectors.getProperty(element)));
         } else if (element.contains("_ID")) {
             return driver.findElements(By.id(selectors.getProperty(element)));
-        } else if(element.contains("_NAME")) {
+        } else if (element.contains("_NAME")) {
             return driver.findElements(By.name(selectors.getProperty(element)));
+        } else if (element.contains("_CLASS")) {
+            return driver.findElements(By.className(selectors.getProperty(element)));
         }
         return new ArrayList<>();
     }
