@@ -1,15 +1,11 @@
 package com.ICCU.Pages;
 
-import org.openqa.selenium.WebDriver;
-
-public class CareersPage {
+public class CareersPage extends BasePage {
     static String expectedUrl = "https://www.iccu.com/careers";
     static String expectedTitle = "Careers - ICCU - Idaho Central Credit Union";
 
-    WebDriver driver;
+    public CareersPage() {
 
-    public CareersPage(WebDriver driver) {
-        this.driver = driver;
     }
 
     public void GoTo() {

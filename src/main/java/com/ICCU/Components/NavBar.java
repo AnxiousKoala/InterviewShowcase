@@ -8,9 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import com.ICCU.BrowserHelper;
+import com.ICCU.utils.BrowserHelper;
 
 public class NavBar {
+
     WebDriver driver;
     BrowserHelper browserHelper;
 
@@ -75,13 +76,13 @@ public class NavBar {
         driver.findElement(usernameBy).sendKeys(userName);
         driver.findElement(passwordBy).sendKeys(password);
         driver.findElement(loginBy).click();
-        return new LandingPage(driver);
+        return new LandingPage();
     }
 
     public AuthenticationPage loginInvalidUser(String userName, String password) {
         driver.findElement(usernameBy).sendKeys(userName);
         driver.findElement(passwordBy).sendKeys(password);
         driver.findElement(loginBy).click();
-        return new AuthenticationPage(driver);
+        return new AuthenticationPage();
     }
 }
