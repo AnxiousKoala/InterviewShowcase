@@ -5,7 +5,7 @@ import com.iccu.utils.BrowserHelper;
 import org.junit.jupiter.api.*;
 
 
-public class TestNavigationBar {
+public class TestNavigationBarComponent {
     // Pages
     public HomePage homePage;
     public CareersPage careersPage;
