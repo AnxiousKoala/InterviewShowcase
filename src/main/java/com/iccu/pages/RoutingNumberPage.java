@@ -15,10 +15,6 @@ public class RoutingNumberPage extends BasePage {
         }
     }
 
-    public void goTo(String url) {
-        driver.get(config.getProperty(url));
-    }
-
     public String getRoutingNumber() {
         return findElement("RoutingNumberPage_RoutingNumber_CSS").getText();
     }
