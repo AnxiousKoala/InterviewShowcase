@@ -29,7 +29,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.clickElement("NavBar_Careers_ID");
 
         // Then I will be at the careers page
-        Assertions.assertTrue(careersPage.IsAt("CareersPage_Title"));
+        Assertions.assertTrue(careersPage.isAt("CareersPage_Title"));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.clickElement("NavBar_Contact_ID");
 
         // Then I will be at the contact page
-        Assertions.assertTrue(contactPage.IsAt("ContactPage_Title"));
+        Assertions.assertTrue(contactPage.isAt("ContactPage_Title"));
     }
 
     @Test
@@ -59,7 +59,7 @@ public class TestNavigationBarComponent {
         browserHelper.waitUntilPageTitleIs(BasePage.config.getProperty("EducationPage_Title"),10);
 
         // Then I will be at the education page
-        Assertions.assertTrue(educationPage.IsAt("EducationPage_Title"));
+        Assertions.assertTrue(educationPage.isAt("EducationPage_Title"));
     }
 
     @Test
@@ -70,7 +70,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.clickElement("NavBar_Espanol_ID");
 
         // Then I will be at the Espanol page
-        Assertions.assertTrue(espanolPage.IsAt("EspanolPage_Title"));
+        Assertions.assertTrue(espanolPage.isAt("EspanolPage_Title"));
     }
 
     @Test
@@ -81,7 +81,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.clickElement("NavBar_Join_ID");
 
         // Then I will be at the join page
-        Assertions.assertTrue(joinPage.IsAt("JoinPage_Title"));
+        Assertions.assertTrue(joinPage.isAt("JoinPage_Title"));
     }
 
     @Test
@@ -92,7 +92,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.clickElement("NavBar_Locations_ID");
 
         // Then I will be at the locations page
-        Assertions.assertTrue(locationsPage.IsAt("LocationsPage_Title"));
+        Assertions.assertTrue(locationsPage.isAt("LocationsPage_Title"));
     }
 
     @Test
@@ -103,7 +103,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.clickElement("NavBar_Rates_ID");
 
         // Then I will be at the locations page
-        Assertions.assertTrue(ratesPage.IsAt("RatesPage_Title"));
+        Assertions.assertTrue(ratesPage.isAt("RatesPage_Title"));
     }
 
     @Test
@@ -117,7 +117,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.loginValidUser();
 
         // Then I will be at the logged in landing page
-        Assertions.assertTrue(landingPage.IsAt("LandingPage_Title"));
+        Assertions.assertTrue(landingPage.isAt("LandingPage_Title"));
     }
 
     @Test
@@ -128,7 +128,7 @@ public class TestNavigationBarComponent {
         BasePage.navBar.loginInvalidUser();
 
         // Then I will be at the logged in landing page
-        Assertions.assertTrue(authenticationPage.IsAt("AuthenticationPage_Title"));
+        Assertions.assertTrue(authenticationPage.isAt("AuthenticationPage_Title"));
     }
 
     @BeforeEach
@@ -147,7 +147,7 @@ public class TestNavigationBarComponent {
         browserHelper = new BrowserHelper();
 
         // Start each test from the homepage
-        homePage.GoTo("HomePage_URL");
+        homePage.goTo("HomePage_URL");
     }
 
     @BeforeAll

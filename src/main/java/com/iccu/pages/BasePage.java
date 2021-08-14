@@ -138,8 +138,6 @@ public class BasePage {
         return new ArrayList<>();
     }
 
-    public void GoTo(String url) {
-        driver.get(config.getProperty(url));
     public boolean isDisplayed(String element) {
         if (element.contains("_XP")) {
             return driver.findElement(By.xpath(selectors.getProperty(element))).isDisplayed();
@@ -155,7 +153,11 @@ public class BasePage {
         return false;
     }
 
-    public boolean IsAt(String title) {
+    public boolean isAt(String title) {
         return driver.getTitle().equals(config.getProperty(title));
+    }
+
+    public void goTo(String url) {
+        driver.get(config.getProperty(url));
     }
 }
